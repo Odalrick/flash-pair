@@ -1,7 +1,7 @@
 ### Infrastructure and Operations Setup
 
 #### Containerization
-- [ ] Initialize new repository with basic React-Typescript structure.
+- [x] Initialize new repository with basic React-Typescript structure.
 - [ ] Create a Dockerfile for development and production.
 - [ ] Add a `.dockerignore` file.
 - [ ] Add a `docker-compose.yml` file for development.
@@ -30,13 +30,13 @@
 ### Application Development
 
 #### Basic React & TypeScript Setup
-- [ ] Initialize a new React-Typescript project.
-- [ ] Add a sample React component.
+- [x] Initialize a new React-Typescript project.
+- [x] Add a sample React component.
 
 #### Code Quality & Developer Experience
-- [ ] Add ESLint for code quality.
-- [ ] Add Prettier for code formatting.
-- [ ] Add `.editorconfig` for consistent coding styles.
+- [x] Add ESLint for code quality.
+- [x] Add Prettier for code formatting.
+- [x] Add `.editorconfig` for consistent coding styles.
 - [ ] Add dotenv for environment variable management.
 
 #### Testing
@@ -48,8 +48,8 @@
 - [ ] Add sample Peer-to-Peer connection setup (Optional).
 
 #### Hot Reloading & Compilation
-- [ ] Enable hot reloading.
-- [ ] Add vite
+- [x] Enable hot reloading.
+- [x] Add vite
 
 #### Run-PTY Wrapper
 - [ ] Integrate a PTY wrapper like `run-pty`.
