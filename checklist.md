@@ -55,9 +55,9 @@
 - [ ] Integrate a PTY wrapper like `run-pty`.
 
 #### Commitizen & Changelog
-- [ ] Install Commitizen.
-- [ ] Initialize Commitizen with an adapter like `cz-conventional-changelog`.
-- [ ] Add a `commit` script in `package.json` for Commitizen.
+- [x] Install Commitizen.
+- [x] Initialize Commitizen with an adapter like `cz-conventional-changelog`.
+- [x] Add a `commit` script in `package.json` for Commitizen.
 - [ ] Install commitlint and its conventional config.
 - [ ] Create commitlint config file.
 - [ ] Add commitlint step in CI/CD pipeline.

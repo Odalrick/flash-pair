@@ -12,7 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "commitizen": "^4.3.0",
-    "cz-customizable": "^7.0.0"
+    "cz-customizable": "^7.0.0",
+    "prettier": "^3.0.3"
   },
   "config": {
     "commitizen": {
