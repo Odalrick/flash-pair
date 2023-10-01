@@ -1,0 +1,112 @@
+@startuml
+
+[*] --> WelcomeScreen
+
+WelcomeScreen --> GameSetupScreen: [Play Now]
+WelcomeScreen --> FindLobbyScreen: [Play]
+WelcomeScreen --> InstructionsScreen: [Instructions]
+WelcomeScreen --> SettingsScreen: [Settings]
+
+InstructionsScreen --> WelcomeScreen: [Back]
+SettingsScreen --> WelcomeScreen: [Back]
+
+FindLobbyScreen --> GameSetupScreen: [Select Game]
+FindLobbyScreen --> WelcomeScreen: [Back or Cancel]
+
+GameSetupScreen --> GameplayScreen: [Start Game]
+GameSetupScreen --> WelcomeScreen: [Back or Cancel]
+
+GameplayScreen --> GameOverResultsScreen: [Game Ends]
+
+GameOverResultsScreen --> GameSetupScreen: [Play Again]
+GameOverResultsScreen --> WelcomeScreen: [Main Menu]
+
+@enduml
+
+@startsalt
+{
+  {T
+    Welcome to Dobble Online
+  }
+  [Play]
+  [Play Now]
+  [Instructions]
+  [Settings]
+}
+@endsalt
+
+
+@startsalt
+{
+  {T
+    Instructions
+  }
+  {+
+    Step 1: blah blah blah
+    ---
+    Step 2: blah blah blah
+    ---
+    ...
+  }
+  [Back]
+}
+@endsalt
+
+@startsalt
+{
+  {T
+    Find a Game Lobby
+  }
+  {+
+    Lobby 1 [Join]
+    ---
+    Lobby 2 [Join]
+    ---
+    Lobby 3 [Join]
+    ---
+    ...
+  }
+  [Create New Lobby]
+  [Refresh List]
+  [Back to Main Menu]
+}
+@endsalt
+
+@startsalt
+{
+  {T
+    Game Setup - Lobby
+  }
+  {+
+    Player Name: [           ]
+    ---
+    Players in Lobby:
+    - Player1 [Ready]
+    - Player2 [Not Ready]
+    - ...
+    ---
+    Choose Card Design: (>   )
+  }
+  [Ready]
+  [Back to Find Lobby]
+}
+@endsalt
+
+@startsalt
+{
+  {T
+    Game Over - Results
+  }
+  {+
+    1. Player1: Score
+    ---
+    2. Player2: Score
+    ---
+    3. Player3: Score
+    ---
+    ...
+  }
+  [Play Again]
+  [Back to Main Menu]
+}
+@endsalt
