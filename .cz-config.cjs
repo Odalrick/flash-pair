@@ -29,5 +29,5 @@ module.exports = {
     },
     { value: "revert", name: "revert: Reverts a previous commit" },
   ],
-  scopes: [{ name: "basics" }],
+  scopes: [{ name: "components" }, { name: "game" }, { name: "basics" }],
 }
