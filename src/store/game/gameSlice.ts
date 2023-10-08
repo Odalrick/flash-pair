@@ -25,15 +25,25 @@ export const gameSlice = createSlice({
       state.playerCard = _action.payload.playerCard
       return state
     },
-    score: (
+    win: (
       state: GameState,
       _action: PayloadAction<{ newScore: number; commonCard: Card.Card }>,
     ) => {
+      state.score = _action.payload.newScore
+      state.commonCard = _action.payload.commonCard
+      return state
+    },
+    lose: (
+      state: GameState,
+      _action: PayloadAction<{ newScore: number; commonCard: Card.Card }>,
+    ) => {
+      state.score = _action.payload.newScore
+      state.commonCard = _action.payload.commonCard
       return state
     },
   },
 })
 
-export const { gameStart, score } = gameSlice.actions
+export const { gameStart, win, lose } = gameSlice.actions
 
 export default gameSlice.reducer
