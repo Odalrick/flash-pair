@@ -7,7 +7,7 @@ interface GameState {
   playerCard: Card.Card
 }
 
-const initialState: GameState = {
+export const initialState: GameState = {
   score: 0,
   commonCard: Card.blank,
   playerCard: Card.blank,
@@ -21,6 +21,8 @@ export const gameSlice = createSlice({
       state: GameState,
       _action: PayloadAction<{ playerCard: Card.Card; commonCard: Card.Card }>,
     ) => {
+      state.commonCard = _action.payload.commonCard
+      state.playerCard = _action.payload.playerCard
       return state
     },
     score: (

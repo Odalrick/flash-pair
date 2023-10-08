@@ -1,17 +1,12 @@
 import { describe, expect, it } from "@jest/globals"
-import * as Card from "data/card"
 
-import reducer, { gameStart } from "./gameSlice"
+import reducer, { gameStart, initialState } from "./gameSlice"
 import { makeGlyph } from "data/glyph.ts"
 import { makeCard } from "data/card"
 
 describe("game reducer", () => {
   it("should start in initial state", () => {
-    expect(reducer(undefined, { type: "unknown" })).toEqual({
-      score: 0,
-      commonCard: Card.blank,
-      playerCard: Card.blank,
-    })
+    expect(reducer(undefined, { type: "unknown" })).toEqual(initialState)
   })
 
   it("should handle gameStart", () => {
@@ -31,17 +26,15 @@ describe("game reducer", () => {
       makeGlyph("d641c190-5f10-4b08-a931-61d742e49fd6"),
       makeGlyph("23cb3b4f-7884-4deb-96d1-d88b83f37823"),
     ])
+
     const actual = reducer(
-      {
-        score: 0,
-        commonCard: Card.blank,
-        playerCard: Card.blank,
-      },
+      initialState,
       gameStart({
         playerCard,
         commonCard,
       }),
     )
+
     expect(actual).toEqual({
       score: 0,
       commonCard,
@@ -49,3 +42,6 @@ describe("game reducer", () => {
     })
   })
 })
+
+// Jag har sagt till prettier att köras för alla dessa filer. Det är några jag lagt till manuellt.
+// {**/*,*}.{js,ts,jsx,tsx,mjs,vue,astro,cjs,json}
